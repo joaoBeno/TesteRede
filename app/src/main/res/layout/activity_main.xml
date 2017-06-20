@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context="br.com.redeindustrial.teste.MainActivity">
+
+    <ImageView
+        android:id="@+id/fundo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/relogio_bg"/>
+
+    <ImageView
+        android:id="@+id/ponteiro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/relogio_ponteiro"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="64dp"
+        android:paddingRight="64dp"
+        app:layout_constraintBottom_toBottomOf="@+id/fundo"
+        >
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_chevron_left_24dp"
+            android:onClick="girarAntiHorario"
+            style="?android:attr/borderlessButtonStyle"/>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ic_chevron_right_24dp"
+            android:onClick="girarHorario"
+            style="?android:attr/borderlessButtonStyle"/>
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>
